@@ -1577,7 +1577,7 @@ Game.hasPriorityUid = function (game, uid) {
 }
 
 Game.addStock = function (game) {
-    console.log(game);
+    // console.log(game);
     var i;
     var len1 = game.resourceStock.length;
     for (i = 0; i < len1; i++) {
@@ -1585,7 +1585,7 @@ Game.addStock = function (game) {
             var sprite = new Sprite(48, 38);
             var label = new Label(`${game.resourceStock[i]}/19`);
             label.font = '20px';
-            label.y = 20;
+            label.y = 18;
             label.x = i * 51 + 90;
             sprite.y = 30;
             sprite.x = i * 51 + 90;
