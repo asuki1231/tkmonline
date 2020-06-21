@@ -1585,8 +1585,8 @@ Game.addStock = function (game) {
             var sprite = new Sprite(48, 38);
             var label = new Label(`${game.resourceStock[i]}/19`);
             label.font = '20px';
-            label.y = 5;
-            label.x = i * 55 + 90;
+            label.y = 20;
+            label.x = i * 51 + 90;
             sprite.y = 30;
             sprite.x = i * 51 + 90;
             sprite.image = new Surface(48, 38);
@@ -1629,6 +1629,7 @@ Game.addStock = function (game) {
         sprite.image.context.fillRect(0, 50 - game.cardStock.length * 2, 48, game.cardStock.length * 2);
         sprite.image.context.strokeRect(0, 0, 48, 50);
         var label = new Label(`${game.cardStock.length}/25`);
+        label.font = '20px';
         label.y = 5;
         label.x = 360;
         this.core.rootScene.addChild(sprite);
