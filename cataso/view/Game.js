@@ -1586,8 +1586,7 @@ Game.addStock = function (game) {
             var label = new Label(`${game.resourceStock[i]}/19`);
             label.font = '20px';
             label.y = 5;
-            label.x = i * 51 + 90;
-            label.textAlign = 'center';
+            label.x = i * 55 + 90;
             sprite.y = 30;
             sprite.x = i * 51 + 90;
             sprite.image = new Surface(48, 38);
@@ -1632,7 +1631,6 @@ Game.addStock = function (game) {
         var label = new Label(`${game.cardStock.length}/25`);
         label.y = 5;
         label.x = 360;
-        label.textAlign = 'center';
         this.core.rootScene.addChild(sprite);
         this.core.rootScene.addChild(label);
     }
