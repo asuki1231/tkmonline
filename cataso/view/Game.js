@@ -1583,11 +1583,10 @@ Game.addStock = function (game) {
     for (i = 0; i < len1; i++) {
         if (game.resourceStock[i] > 0) {
             var sprite = new Sprite(48, 38);
-            var label = new Label('Great Red Spirit');
+            var label = new Label(`${i}/19`);
             label.font = '20px';
-            label.x = 10;
             label.y = 5;
-
+            label.x = i * 51 + 90;
             sprite.y = 30;
             sprite.x = i * 51 + 90;
             sprite.image = new Surface(48, 38);
