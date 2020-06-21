@@ -1577,6 +1577,7 @@ Game.hasPriorityUid = function (game, uid) {
 }
 
 Game.addStock = function (game) {
+    console.log(game);
     var i;
     var len1 = game.resourceStock.length;
     for (i = 0; i < len1; i++) {
