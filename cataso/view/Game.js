@@ -1583,7 +1583,7 @@ Game.addStock = function (game) {
     for (i = 0; i < len1; i++) {
         if (game.resourceStock[i] > 0) {
             var sprite = new Sprite(48, 38);
-            var label = new Label(`${i}/19`);
+            var label = new Label(`${game.resourceStock[i]}/19`);
             label.font = '20px';
             label.y = 5;
             label.x = i * 51 + 90;
