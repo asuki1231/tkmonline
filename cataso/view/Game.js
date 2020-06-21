@@ -1587,6 +1587,7 @@ Game.addStock = function (game) {
             label.font = '20px';
             label.y = 5;
             label.x = i * 51 + 90;
+            label.textAlign = 'center';
             sprite.y = 30;
             sprite.x = i * 51 + 90;
             sprite.image = new Surface(48, 38);
@@ -1628,7 +1629,11 @@ Game.addStock = function (game) {
         sprite.image.context.fillStyle = 'rgb(0,0,0)';
         sprite.image.context.fillRect(0, 50 - game.cardStock.length * 2, 48, game.cardStock.length * 2);
         sprite.image.context.strokeRect(0, 0, 48, 50);
-
+        var label = new Label(`${game.cardStock.length}/25`);
+        label.y = 5;
+        label.x = 360;
+        label.textAlign = 'center';
         this.core.rootScene.addChild(sprite);
+        this.core.rootScene.addChild(label);
     }
 }
