@@ -1583,6 +1583,10 @@ Game.addStock = function (game) {
     for (i = 0; i < len1; i++) {
         if (game.resourceStock[i] > 0) {
             var sprite = new Sprite(48, 38);
+            var label = new Label('Great Red Spirit');
+            label.font = '20px';
+            label.x = 10;
+            label.y = 5;
 
             sprite.y = 30;
             sprite.x = i * 51 + 90;
@@ -1610,7 +1614,7 @@ Game.addStock = function (game) {
             
             sprite.image.context.fillRect(0, 38 - game.resourceStock[i] * 2, 48, game.resourceStock[i] * 2);
             sprite.image.context.strokeRect(0, 0, 48, 38);
-
+            this.core.rootScene.addChild(label);
             this.core.rootScene.addChild(sprite);
         }
     }
